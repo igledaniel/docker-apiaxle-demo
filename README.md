@@ -18,7 +18,7 @@ docker-compose up
 ## Setup project and keys
 
 ```bash
-curl http://apiaxle-api/v1/apis
+curl 'http://apiaxle-api/v1/apis'
 
 curl -H 'content-type: application/json' \
   -X POST \
