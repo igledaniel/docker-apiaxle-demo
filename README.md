@@ -15,6 +15,8 @@ docker-compose build
 docker-compose up
 ```
 
+## Setup project and keys
+
 ```bash
 curl http://apiaxle-api/v1/apis
 
@@ -40,5 +42,13 @@ curl -H 'content-type: application/json' \
 curl -H 'content-type: application/json' \
   -X PUT \
     'http://localhost/v1/api/service-2/linkkey/something-special'
+
+```
+
+## Get some stats
+
+```bash
+
+curl 'http://apiaxle-api/v1/api/service-1/stats'
 
 ```

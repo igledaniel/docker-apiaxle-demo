@@ -28,6 +28,13 @@ proxy:
   environment:
     NODE_ENV: production
 
+proxy-event-subscriber:
+  build: ./proxy-event-subscriber
+  links:
+    - redis
+  environment:
+    NODE_ENV: production
+
 fake-services:
   build: ./fake-services
   ports:
