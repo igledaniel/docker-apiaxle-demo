@@ -1,0 +1,37 @@
+redis:
+  image: redis
+
+api:
+  build: ./api
+  links:
+    - redis
+  ports:
+    - "3100"
+  environment:
+    NODE_ENV: production
+
+web-proxy:
+  build: ./web-proxy
+  ports:
+    - "80:80"
+  links:
+    - proxy
+    - api
+
+proxy:
+  build: ./proxy
+  links:
+    - redis
+    - fake-services
+  ports:
+    - "3200"
+  environment:
+    NODE_ENV: production
+
+fake-services:
+  build: ./fake-services
+  ports:
+    - "8001"
+    - "8002"
+  volumes:
+    - ./fake-services/data:/data
