@@ -17,6 +17,8 @@ web-proxy:
   links:
     - proxy
     - api
+  volumes:
+    - ./apiaxle-admin/releases/v1:/data/admin
 
 proxy:
   build: ./proxy
