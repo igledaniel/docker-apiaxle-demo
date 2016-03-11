@@ -1,0 +1,3 @@
+[submodule "apiaxle-admin"]
+	path = apiaxle-admin
+	url = git@github.com:mapzen/apiaxle-admin.git
