@@ -17,6 +17,14 @@ docker-compose up
 
 ## Setup project and keys
 
+On your browser you can open a ad-hoc admin screen where you can edit some of the api. This is application does not allow editing of all fields and is just intended for demonstration purposes.
+
+```bash
+http://apiaxle-api
+```
+
+### Using the API
+
 ```bash
 curl 'http://apiaxle-api/v1/apis'
 
