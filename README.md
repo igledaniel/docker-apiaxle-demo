@@ -35,7 +35,7 @@ curl -H 'content-type: application/json' \
 
 curl -H 'content-type: application/json' \
   -X POST \
-    -d '{"endPoint":"fake-services:8001"}' \
+    -d '{"endPoint":"fake-services:8002"}' \
       'http://apiaxle-api/v1/api/service-2'
 
 curl -H 'content-type: application/json' \
